@@ -5,24 +5,6 @@ import { TasksCollection } from '/imports/db/TasksCollection';
 export const TaskForm = ({ user }) => {
     const [text, setText] = useState('');
 
-    // secure operation after running  meteor remove insecure
-    // ====================================
-
-    const handleSubmit = e => {
-        e.preventDefault();
-
-        if (!text) return;
-
-        TasksCollection.insert({
-            text: text.trim(),
-            createdAt: new Date(),
-            userId: user._id
-        });
-
-        setText('');
-    };
-
-
     // insecure operation 
     // ====================================
 
@@ -31,10 +13,27 @@ export const TaskForm = ({ user }) => {
 
     //     if (!text) return;
 
-    //     Meteor.call('tasks.insert', text);
+    //     TasksCollection.insert({
+    //         text: text.trim(),
+    //         createdAt: new Date(),
+    //         userId: user._id
+    //     });
 
     //     setText('');
     // };
+
+    // secure operation after running  meteor remove insecure
+    // ====================================
+
+    const handleSubmit = e => {
+        e.preventDefault();
+
+        if (!text) return;
+
+        Meteor.call('tasks.insert', text);
+
+        setText('');
+    };
 
     return (
         <form className="task-form" onSubmit={handleSubmit}>
