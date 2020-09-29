@@ -82,7 +82,7 @@ header {
   margin: 16px;
 }
 
-.task-form > input {
+.task-form>input {
   flex-grow: 1;
   box-sizing: border-box;
   padding: 10px 6px;
@@ -93,11 +93,11 @@ header {
   margin-right: 16px;
 }
 
-.task-form > input:focus {
+.task-form>input:focus {
   outline: 0;
 }
 
-.task-form > button {
+.task-form>button {
   min-width: 100px;
   height: 95%;
   background-color: #315481;
@@ -115,14 +115,15 @@ header {
 .task {
   display: flex;
   padding: 16px;
+  text-transform: capitalize;
   border-bottom: #eee solid 1px;
 }
 
-.task > span {
+.task>span {
   flex-grow: 1;
 }
 
-.task > button {
+.task>button {
   justify-self: flex-end;
   background-color: #ff3046;
 }
@@ -132,7 +133,7 @@ header {
   justify-content: center;
 }
 
-.filter > button {
+.filter>button {
   background-color: #62807e;
 }
 
@@ -145,15 +146,15 @@ header {
   align-items: center;
 }
 
-.login-form > div {
+.login-form>div {
   margin: 8px;
 }
 
-.login-form > div > label {
+.login-form>div>label {
   font-weight: bold;
 }
 
-.login-form > div > input {
+.login-form>div>input {
   flex-grow: 1;
   box-sizing: border-box;
   padding: 10px 6px;
@@ -165,11 +166,11 @@ header {
   margin-top: 4px;
 }
 
-.login-form > div > input:focus {
+.login-form>div>input:focus {
   outline: 0;
 }
 
-.login-form > div > button {
+.login-form>div>button {
   background-color: #62807e;
 }
 
@@ -189,6 +190,7 @@ header {
   align-items: center;
   font-weight: bold;
 }
+
 .complete {
   text-decoration: line-through;
   color: #999;
