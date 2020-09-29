@@ -10,7 +10,7 @@ import { LoginForm } from './LoginForm';
 const toggleChecked = ({ _id, isChecked }) =>
   Meteor.call('tasks.setIsChecked', _id, !isChecked);
 
-// demo tasks before implimenting db functionality
+// demo tasks before implementing db functionality
 // const tasks = [
 //   { _id: 1, text: 'First Task' },
 //   { _id: 2, text: 'Second Task' },
