@@ -9,7 +9,7 @@ export const Task = ({ task, onCheckboxClick, onDeleteClick }) => {
                 onClick={() => onCheckboxClick(task)}
                 readOnly
             />
-            <span>{task.text}</span>
+            <span className={task.isChecked ? "complete" : ""}>{task.text}</span>
             <button onClick={() => onDeleteClick(task)}>&times;</button>
         </li>
     );
