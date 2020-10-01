@@ -1,4 +1,3 @@
-// main entry app
 import React, { useState, Fragment } from 'react';
 import { useTracker } from 'meteor/react-meteor-data';
 // import { TasksCollection } from '/imports/api/TasksCollection';
